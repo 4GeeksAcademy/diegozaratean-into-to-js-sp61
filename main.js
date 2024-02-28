@@ -1,38 +1,105 @@
-console.log('desde archivo')
-
-let num = 0 
-
-console.log(1)
-console.log(2)
-console.log(3)
-console.log(4)
-console.log(5)
+console.log('desde archivo 123')
 
 
-console.log('Con FOR')
-// for(inicializacion;coindicion;actualizacion)
-for(let i=30;i <= 50;i+=5){
-    console.log(i)
+function saludo(){
+    console.log('Hola')
 }
 
-//. lenth.        1.      2.       3.        4
-const frutas = ['pera','manzana','platano','fresa','banano']
-// position.      0.      1.        2.        3.      4
-console.log(frutas)
+saludo()
+// saludo()
+// saludo()
 
+// function transportar(origen,destino){
+//     console.log('Saliendo de ' + origen)
+//     console.log('moviendome')
+//     console.log('llegando a ' + destino)
+// }
+// transportar('casa','super')
+// transportar('super','oficina')
+// transportar('oficina','casa')
+// transportar()
+// transportar()
 
-// console.log(frutas[0] + 's')
-// console.log(frutas[1] + 's')
-// console.log(frutas[2] + 's')
-// console.log(frutas[3] + 's')
-console.log('FRUTAS PLURAL')
-for(i = frutas.length -1; i >= 0 ; i--){
+// let alumno = 'juan'
+// console.log('Andes de la funcion ' + alumno)
+// function saludarAlumno(alumno){
+//     console.log('Dentro de la funcion ' + alumno)
+//     console.log('Hola ' + alumno)
+// }
 
-    console.log(frutas[i] + 's')
+// console.log('Despues de la funcion ' + alumno)
+
+// saludarAlumno('pedro')
+// saludarAlumno('jorge')
+// saludarAlumno('Cris')
+
+function suma(num1,num2){
+    return num1 + num2
 }
 
-console.log('FRUTAS PLURA reverse')
-for(i = 0; i < frutas.length ; i++){
 
-    console.log(frutas.reverse()[i] + 's')
+// console.log(suma(2,2), 'esto debe devolver 4') /// 4
+// console.log(suma(2,5))  // 7
+// console.log(suma(6,3)) // 9
+// console.log(suma(0,5)) // 5
+
+// function puedoBeber(edad){
+//     if(edad >= 18){
+//         console.log(1)
+//         return 'Si puedes beber'
+//         console.log(2)
+//     }else{
+//         console.log(3)
+//         return 'No puedes beber'
+//         console.log(4)
+//     }
+// }
+
+// console.log(puedoBeber("24"))
+// console.log(puedoBeber(14))
+
+function calculoIRPF(ingreso){
+    return ingreso * 0.15
 }
+
+
+
+document.getElementById('impuesto').innerHTML = calculoIRPF(10000)
+
+
+
+
+// console.log('ANTES se ejecuto window onload');
+// window.onload = function() {
+
+//     console.log('se ejecuto window onload');
+
+// }
+// console.log('DESPUES se ejecuto window onload');
+
+// funcion declarativa
+saludoDeclarativo()
+function saludoDeclarativo(){
+    console.log('Hola saludoDeclarativo')
+}
+
+
+// funcion de expresión
+const saludExpresion = function(){
+    console.log('Hola saludExpresion')
+}
+saludExpresion()
+
+//funcion flecha
+const saludoArrow = ()=> {
+    console.log('Hola saludoArrow')
+}
+saludoArrow()
+
+// PSEUDO CODIGO
+// 1. modificar el html desde js
+// 2. armnar una oracion a aprtir de un sujeto un verbo y etc
+// 3. obetenr un el;emento aleatorio de who
+// 4. obetenr un el;emento aleatorio de action
+// 5. obetenr un el;emento aleatorio de what
+// 6. obetenr un el;emento aleatorio de whn
