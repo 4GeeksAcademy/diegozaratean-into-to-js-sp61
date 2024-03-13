@@ -5,6 +5,7 @@ console.log('hola Dom')
     apellido: 'rivero',
     edad: 12,
     skills:['js','python','react'],
+    'lugar de nacimiento': 'sevilla',
     programar: function(){
         console.log('estoy programando')
     }
@@ -36,8 +37,14 @@ let perro = {
 
 function changeTitle(){
     console.log('changeTitle')
-    document.getElementById('title').innerHTML = 'Nuevo titulo'
-    document.getElementById('title').style.backgroundColor = 'pink'
+    let marioNames = ['Mario','Luigi','Bowser','Peach']
+    let colores = ['red','blue','pink','green']
+   
+    let randomName =  marioNames[Math.floor( Math.random() *  marioNames.length)]
+    let randomColor = colores[Math.floor( Math.random() * colores.length ) ]
+    console.log(randomColor)
+    document.getElementById('title').innerHTML = `hola ${randomName}`
+    document.getElementById('title').style.backgroundColor = randomColor
 }
 
 
@@ -45,8 +52,20 @@ document.getElementById('boton').addEventListener('click',changeTitle)
 
 
 
+// PSEUDO CODIGO
+// hacer un juego que cuadno le de click a un boton muestre el resultado de lanzar dos dados 
+// DONE - obtener un numero aletorio del 1 al 6 para el dado 1
+// DONE - obtener un numero aletorio del 1 al 6 para el dado 2
+// DONE -crear una funcion que lacne los dados
+// DONE -cuando le de click a un boton debo llamar la funcion
+// DONE - agregar dados y boton a la vista
+// estilizar hacer bonitos los dados
+// DONE -asignar el valor aletorio al dado 1
+// DONE -asignar el valor aletorio al dado 2
 
 
-
-
+function throwDices(){
+    document.getElementById('dice1').innerText = Math.floor((Math.random() *6) +1 )
+    document.getElementById('dice2').innerText = Math.floor((Math.random() *6) +1 )
+}
 
