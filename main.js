@@ -69,3 +69,32 @@ function throwDices(){
     document.getElementById('dice2').innerText = Math.floor((Math.random() *6) +1 )
 }
 
+
+
+// PSEUDO CODIGO
+// agrgar dos  entradas para el alto y el ancho de los dados y tener un botn que lo modifique
+// DONE - agregar dos inputs una para el alto y otra para el ancho y un boton 
+// DONE -cuando le hago click sobre el boton debo llamar una funcion de js
+// DONE - crear la funcion de js
+// DONE -cambiar alto de dado
+// DONE -cambiar ancho de dado
+// DONE -leer el contenido de los inputs. dealto y de ancho
+// juntar todo lo anterior 
+
+function changeSize(){
+    let widthValue = document.getElementById('width').value
+    let heigthValue = document.getElementById('heigth').value
+    
+    document.getElementById('dice1').style.height = heigthValue + 'px'
+    document.getElementById('dice1').style.width = widthValue + 'px'
+    document.getElementById('dice2').style.height = `${heigthValue}px`
+    document.getElementById('dice2').style.width = widthValue + 'px'
+}
+
+
+setInterval(throwDices, 3000);
+
+// function myCallback() {
+//   throwDices()
+// }
+
